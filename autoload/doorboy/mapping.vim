@@ -10,6 +10,7 @@ let s:DEL = "\<DEL>"
 let s:SPACE = " "
 let s:CR = "\<CR>"
 let s:UP = "\<UP>"
+let s:END = "\<END>"
 let s:TAB = "\<TAB>"
 
 """""""""" Mapped functions
@@ -66,7 +67,7 @@ endfunction
 
 function! doorboy#mapping#cr()
   if doorboy#util#is_between_brackets()
-    return s:CR . s:CR . s:UP . s:TAB
+    return s:CR . s:UP . s:END . s:CR
   endif
   return s:CR
 endfunction
